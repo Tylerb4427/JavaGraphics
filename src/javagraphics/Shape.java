@@ -1,3 +1,5 @@
+package javagraphics;
+
 //(c) A+ Computer Science
 //www.apluscompsci.com
 
@@ -16,20 +18,25 @@ public class Shape
 	private int yPos;
 	private int width;
 	private int height;
-	private Color color;
+	private float color;
 
-   public Shape(int x, int y, int wid, int ht, Color col)
+   public Shape(int x, int y, int wid, int ht, float col)
    {
 		xPos = x;
+                yPos= y;
+                width=wid;
+                height=ht;
+                color=col;
 		//finish this constructor
    }
 
 
    public void draw(Graphics window)
    {
-      window.setColor(color);
-      window.fillRect(xPos, yPos, width, height);
-
+      for(float i=width;i>0;i--){
+      window.setColor(Color.getHSBColor(i/100+color, .5f, 1f));
+      window.fillOval(xPos, yPos, (int)i, (int)i);
+      }
       //draw whatever you want
       //    ^
       //  [ :: ]

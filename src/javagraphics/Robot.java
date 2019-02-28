@@ -1,3 +1,4 @@
+package javagraphics;
 //(c) A+ Computer Science
 //www.apluscompsci.com
 
@@ -25,7 +26,9 @@ class Robot extends Canvas
 
       window.drawString("Robot LAB ", 35, 35 );
 
-      //call head method
+     head(window);
+     upperBody(window);
+     lowerBody(window);
       
       //call other methods
       
@@ -33,10 +36,11 @@ class Robot extends Canvas
 
    public void head( Graphics window )
    {
-      window.setColor(Color.YELLOW);
-
-      window.fillOval(300, 100, 200, 100);
-
+      window.setColor(Color.gray);
+      window.fillRect(400-50, 100, 100, 100);
+      window.setColor(Color.red);
+      window.fillOval(400-10-20, 120, 20, 20);  
+      window.fillOval(400-10+20, 120, 20, 20);
 
 		//add more code here
 				
@@ -44,13 +48,18 @@ class Robot extends Canvas
 
    public void upperBody( Graphics window )
    {
-
+      window.setColor(Color.gray);
+      window.fillRect(400-100, 200, 200, 200);
+      window.fillRect(200, 220, 400, 25);
+      
 		//add more code here
    }
 
    public void lowerBody( Graphics window )
    {
-
+    window.setColor(Color.gray);
+    window.fillRect(400-(75/2)+50, 300, 75, 200);
+    window.fillRect(400-(75/2)-50, 300, 75, 200);
 		//add more code here
 
    }

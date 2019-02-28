@@ -1,3 +1,4 @@
+package javagraphics;
 //(c) A+ Computer Science
 //www.apluscompsci.com
 
@@ -28,7 +29,6 @@ public class SmileyFace extends Canvas
    {
       window.setColor(Color.BLUE);
       window.drawString("SMILEY FACE LAB ", 35, 35);
-
       window.setColor(Color.YELLOW);
       window.fillOval( 210, 100, 400, 400 );
       window.setColor(Color.BLACK);

@@ -1,3 +1,4 @@
+package javagraphics;
 //(c) A+ Computer Science
 //www.apluscompsci.com
 
@@ -40,8 +41,14 @@ public class ShapePanel extends JPanel
 		window.setFont(new Font("TAHOMA",Font.BOLD,18));
 		window.drawString("CREATE YOUR OWN SHAPE!",40,40);
 
-
-		//instantiate a Shape
+                Shape shape1 = new Shape(100,100,100,100,.5f);
+                Shape shape2 = new Shape(200,200,200,200,1f);
+                Shape shape3 = new Shape(500,300,150,150,.25f);
+		shape1.draw(window);
+                shape2.draw(window);
+                shape3.draw(window);
+                //shape2.draw
+                //instantiate a Shape
 		//tell your shape to draw
 
 		//instantiate a Shape
